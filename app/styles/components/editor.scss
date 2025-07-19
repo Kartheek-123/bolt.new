@@ -1,135 +1,135 @@
 :root {
-  --cm-backgroundColor: var(--bolt-elements-editor-backgroundColor, var(--bolt-elements-bg-depth-1));
-  --cm-textColor: var(--bolt-elements-editor-textColor, var(--bolt-elements-textPrimary));
+  --cm-backgroundColor: var(--devloop-elements-editor-backgroundColor, var(--devloop-elements-bg-depth-1));
+  --cm-textColor: var(--devloop-elements-editor-textColor, var(--devloop-elements-textPrimary));
 
   /* Gutter */
 
-  --cm-gutter-backgroundColor: var(--bolt-elements-editor-gutter-backgroundColor, var(--cm-backgroundColor));
-  --cm-gutter-textColor: var(--bolt-elements-editor-gutter-textColor, var(--bolt-elements-textSecondary));
-  --cm-gutter-activeLineTextColor: var(--bolt-elements-editor-gutter-activeLineTextColor, var(--cm-gutter-textColor));
+  --cm-gutter-backgroundColor: var(--devloop-elements-editor-gutter-backgroundColor, var(--cm-backgroundColor));
+  --cm-gutter-textColor: var(--devloop-elements-editor-gutter-textColor, var(--devloop-elements-textSecondary));
+  --cm-gutter-activeLineTextColor: var(--devloop-elements-editor-gutter-activeLineTextColor, var(--cm-gutter-textColor));
 
   /* Fold Gutter */
 
-  --cm-foldGutter-textColor: var(--bolt-elements-editor-foldGutter-textColor, var(--cm-gutter-textColor));
-  --cm-foldGutter-textColorHover: var(--bolt-elements-editor-foldGutter-textColorHover, var(--cm-gutter-textColor));
+  --cm-foldGutter-textColor: var(--devloop-elements-editor-foldGutter-textColor, var(--cm-gutter-textColor));
+  --cm-foldGutter-textColorHover: var(--devloop-elements-editor-foldGutter-textColorHover, var(--cm-gutter-textColor));
 
   /* Active Line */
 
-  --cm-activeLineBackgroundColor: var(--bolt-elements-editor-activeLineBackgroundColor, rgb(224 231 235 / 30%));
+  --cm-activeLineBackgroundColor: var(--devloop-elements-editor-activeLineBackgroundColor, rgba(59, 130, 246, 0.1));
 
   /* Cursor */
 
   --cm-cursor-width: 2px;
-  --cm-cursor-backgroundColor: var(--bolt-elements-editor-cursorColor, var(--bolt-elements-textSecondary));
+  --cm-cursor-backgroundColor: var(--devloop-elements-editor-cursorColor, var(--devloop-elements-textSecondary));
 
   /* Matching Brackets */
 
-  --cm-matching-bracket: var(--bolt-elements-editor-matchingBracketBackgroundColor, rgb(50 140 130 / 0.3));
+  --cm-matching-bracket: var(--devloop-elements-editor-matchingBracketBackgroundColor, rgba(59, 130, 246, 0.3));
 
   /* Selection */
 
-  --cm-selection-backgroundColorFocused: var(--bolt-elements-editor-selection-backgroundColor, #42b4ff);
-  --cm-selection-backgroundOpacityFocused: var(--bolt-elements-editor-selection-backgroundOpacity, 0.3);
-  --cm-selection-backgroundColorBlured: var(--bolt-elements-editor-selection-inactiveBackgroundColor, #c9e9ff);
-  --cm-selection-backgroundOpacityBlured: var(--bolt-elements-editor-selection-inactiveBackgroundOpacity, 0.3);
+  --cm-selection-backgroundColorFocused: var(--devloop-elements-editor-selection-backgroundColor, #3b82f6);
+  --cm-selection-backgroundOpacityFocused: var(--devloop-elements-editor-selection-backgroundOpacity, 0.3);
+  --cm-selection-backgroundColorBlured: var(--devloop-elements-editor-selection-inactiveBackgroundColor, #93c5fd);
+  --cm-selection-backgroundOpacityBlured: var(--devloop-elements-editor-selection-inactiveBackgroundOpacity, 0.2);
 
   /* Panels */
 
-  --cm-panels-borderColor: var(--bolt-elements-editor-panels-borderColor, var(--bolt-elements-borderColor));
+  --cm-panels-borderColor: var(--devloop-elements-editor-panels-borderColor, var(--devloop-elements-borderColor));
 
   /* Search */
 
-  --cm-search-backgroundColor: var(--bolt-elements-editor-search-backgroundColor, var(--cm-backgroundColor));
-  --cm-search-textColor: var(--bolt-elements-editor-search-textColor, var(--bolt-elements-textSecondary));
-  --cm-search-closeButton-backgroundColor: var(--bolt-elements-editor-search-closeButton-backgroundColor, transparent);
+  --cm-search-backgroundColor: var(--devloop-elements-editor-search-backgroundColor, var(--cm-backgroundColor));
+  --cm-search-textColor: var(--devloop-elements-editor-search-textColor, var(--devloop-elements-textSecondary));
+  --cm-search-closeButton-backgroundColor: var(--devloop-elements-editor-search-closeButton-backgroundColor, transparent);
 
   --cm-search-closeButton-backgroundColorHover: var(
-    --bolt-elements-editor-search-closeButton-backgroundColorHover,
-    var(--bolt-elements-item-backgroundActive)
+    --devloop-elements-editor-search-closeButton-backgroundColorHover,
+    var(--devloop-elements-item-backgroundActive)
   );
 
   --cm-search-closeButton-textColor: var(
-    --bolt-elements-editor-search-closeButton-textColor,
-    var(--bolt-elements-item-contentDefault)
+    --devloop-elements-editor-search-closeButton-textColor,
+    var(--devloop-elements-item-contentDefault)
   );
 
   --cm-search-closeButton-textColorHover: var(
-    --bolt-elements-editor-search-closeButton-textColorHover,
-    var(--bolt-elements-item-contentActive)
+    --devloop-elements-editor-search-closeButton-textColorHover,
+    var(--devloop-elements-item-contentActive)
   );
 
   --cm-search-button-backgroundColor: var(
-    --bolt-elements-editor-search-button-backgroundColor,
-    var(--bolt-elements-item-backgroundDefault)
+    --devloop-elements-editor-search-button-backgroundColor,
+    var(--devloop-elements-item-backgroundDefault)
   );
 
   --cm-search-button-backgroundColorHover: var(
-    --bolt-elements-editor-search-button-backgroundColorHover,
-    var(--bolt-elements-item-backgroundActive)
+    --devloop-elements-editor-search-button-backgroundColorHover,
+    var(--devloop-elements-item-backgroundActive)
   );
 
-  --cm-search-button-textColor: var(--bolt-elements-editor-search-button-textColor, var(--bolt-elements-textSecondary));
+  --cm-search-button-textColor: var(--devloop-elements-editor-search-button-textColor, var(--devloop-elements-textSecondary));
 
   --cm-search-button-textColorHover: var(
-    --bolt-elements-editor-search-button-textColorHover,
-    var(--bolt-elements-textPrimary)
+    --devloop-elements-editor-search-button-textColorHover,
+    var(--devloop-elements-textPrimary)
   );
 
-  --cm-search-button-borderColor: var(--bolt-elements-editor-search-button-borderColor, transparent);
-  --cm-search-button-borderColorHover: var(--bolt-elements-editor-search-button-borderColorHover, transparent);
+  --cm-search-button-borderColor: var(--devloop-elements-editor-search-button-borderColor, transparent);
+  --cm-search-button-borderColorHover: var(--devloop-elements-editor-search-button-borderColorHover, transparent);
 
   --cm-search-button-borderColorFocused: var(
-    --bolt-elements-editor-search-button-borderColorFocused,
-    var(--bolt-elements-borderColorActive)
+    --devloop-elements-editor-search-button-borderColorFocused,
+    var(--devloop-elements-borderColorActive)
   );
 
-  --cm-search-input-backgroundColor: var(--bolt-elements-editor-search-input-backgroundColor, transparent);
-  --cm-search-input-textColor: var(--bolt-elements-editor-search-input-textColor, var(--bolt-elements-textPrimary));
-  --cm-search-input-borderColor: var(--bolt-elements-editor-search-input-borderColor, var(--bolt-elements-borderColor));
+  --cm-search-input-backgroundColor: var(--devloop-elements-editor-search-input-backgroundColor, transparent);
+  --cm-search-input-textColor: var(--devloop-elements-editor-search-input-textColor, var(--devloop-elements-textPrimary));
+  --cm-search-input-borderColor: var(--devloop-elements-editor-search-input-borderColor, var(--devloop-elements-borderColor));
 
   --cm-search-input-borderColorFocused: var(
-    --bolt-elements-editor-search-input-borderColorFocused,
-    var(--bolt-elements-borderColorActive)
+    --devloop-elements-editor-search-input-borderColorFocused,
+    var(--devloop-elements-borderColorActive)
   );
 
   /* Tooltip */
 
-  --cm-tooltip-backgroundColor: var(--bolt-elements-editor-tooltip-backgroundColor, var(--cm-backgroundColor));
-  --cm-tooltip-textColor: var(--bolt-elements-editor-tooltip-textColor, var(--bolt-elements-textPrimary));
+  --cm-tooltip-backgroundColor: var(--devloop-elements-editor-tooltip-backgroundColor, var(--cm-backgroundColor));
+  --cm-tooltip-textColor: var(--devloop-elements-editor-tooltip-textColor, var(--devloop-elements-textPrimary));
 
   --cm-tooltip-backgroundColorSelected: var(
-    --bolt-elements-editor-tooltip-backgroundColorSelected,
-    theme('colors.alpha.accent.30')
+    --devloop-elements-editor-tooltip-backgroundColorSelected,
+    rgba(59, 130, 246, 0.2)
   );
 
   --cm-tooltip-textColorSelected: var(
-    --bolt-elements-editor-tooltip-textColorSelected,
-    var(--bolt-elements-textPrimary)
+    --devloop-elements-editor-tooltip-textColorSelected,
+    var(--devloop-elements-textPrimary)
   );
 
-  --cm-tooltip-borderColor: var(--bolt-elements-editor-tooltip-borderColor, var(--bolt-elements-borderColor));
+  --cm-tooltip-borderColor: var(--devloop-elements-editor-tooltip-borderColor, var(--devloop-elements-borderColor));
 
-  --cm-searchMatch-backgroundColor: var(--bolt-elements-editor-searchMatch-backgroundColor, rgba(234, 92, 0, 0.33));
+  --cm-searchMatch-backgroundColor: var(--devloop-elements-editor-searchMatch-backgroundColor, rgba(251, 191, 36, 0.3));
 }
 
 html[data-theme='light'] {
-  --bolt-elements-editor-gutter-textColor: #237893;
-  --bolt-elements-editor-gutter-activeLineTextColor: var(--bolt-elements-textPrimary);
-  --bolt-elements-editor-foldGutter-textColorHover: var(--bolt-elements-textPrimary);
-  --bolt-elements-editor-activeLineBackgroundColor: rgb(50 53 63 / 5%);
-  --bolt-elements-editor-tooltip-backgroundColorSelected: theme('colors.alpha.accent.20');
-  --bolt-elements-editor-search-button-backgroundColor: theme('colors.gray.100');
-  --bolt-elements-editor-search-button-backgroundColorHover: theme('colors.alpha.gray.10');
+  --devloop-elements-editor-gutter-textColor: #64748b;
+  --devloop-elements-editor-gutter-activeLineTextColor: var(--devloop-elements-textPrimary);
+  --devloop-elements-editor-foldGutter-textColorHover: var(--devloop-elements-textPrimary);
+  --devloop-elements-editor-activeLineBackgroundColor: rgba(59, 130, 246, 0.05);
+  --devloop-elements-editor-tooltip-backgroundColorSelected: rgba(59, 130, 246, 0.15);
+  --devloop-elements-editor-search-button-backgroundColor: rgba(241, 245, 249, 0.8);
+  --devloop-elements-editor-search-button-backgroundColorHover: rgba(226, 232, 240, 0.8);
 }
 
 html[data-theme='dark'] {
-  --cm-backgroundColor: var(--bolt-elements-bg-depth-2);
-  --bolt-elements-editor-gutter-textColor: var(--bolt-elements-textTertiary);
-  --bolt-elements-editor-gutter-activeLineTextColor: var(--bolt-elements-textSecondary);
-  --bolt-elements-editor-selection-inactiveBackgroundOpacity: 0.3;
-  --bolt-elements-editor-activeLineBackgroundColor: rgb(50 53 63 / 50%);
-  --bolt-elements-editor-foldGutter-textColorHover: var(--bolt-elements-textPrimary);
-  --bolt-elements-editor-matchingBracketBackgroundColor: rgba(66, 180, 255, 0.3);
-  --bolt-elements-editor-search-button-backgroundColor: theme('colors.gray.800');
-  --bolt-elements-editor-search-button-backgroundColorHover: theme('colors.alpha.white.10');
+  --cm-backgroundColor: var(--devloop-elements-bg-depth-2);
+  --devloop-elements-editor-gutter-textColor: var(--devloop-elements-textTertiary);
+  --devloop-elements-editor-gutter-activeLineTextColor: var(--devloop-elements-textSecondary);
+  --devloop-elements-editor-selection-inactiveBackgroundOpacity: 0.2;
+  --devloop-elements-editor-activeLineBackgroundColor: rgba(59, 130, 246, 0.1);
+  --devloop-elements-editor-foldGutter-textColorHover: var(--devloop-elements-textPrimary);
+  --devloop-elements-editor-matchingBracketBackgroundColor: rgba(59, 130, 246, 0.3);
+  --devloop-elements-editor-search-button-backgroundColor: rgba(51, 65, 85, 0.8);
+  --devloop-elements-editor-search-button-backgroundColorHover: rgba(71, 85, 105, 0.8);
 }

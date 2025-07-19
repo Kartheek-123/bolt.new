@@ -13,18 +13,22 @@ export function SendButton({ show, isStreaming, onClick }: SendButtonProps) {
     <AnimatePresence>
       {show ? (
         <motion.button
-          className="absolute flex justify-center items-center top-[18px] right-[22px] p-1 bg-accent-500 hover:brightness-94 color-white rounded-md w-[34px] h-[34px] transition-theme"
+          className="absolute flex justify-center items-center top-[24px] right-[24px] p-3 bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white rounded-xl w-[48px] h-[48px] transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
           transition={{ ease: customEasingFn, duration: 0.17 }}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 10, scale: 0.9 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: 10, scale: 0.9 }}
           onClick={(event) => {
             event.preventDefault();
             onClick?.(event);
           }}
         >
-          <div className="text-lg">
-            {!isStreaming ? <div className="i-ph:arrow-right"></div> : <div className="i-ph:stop-circle-bold"></div>}
+          <div className="text-xl">
+            {!isStreaming ? (
+              <div className="i-ph:paper-plane-tilt-bold"></div>
+            ) : (
+              <div className="i-ph:stop-circle-bold"></div>
+            )}
           </div>
         </motion.button>
       ) : null}

@@ -39,14 +39,14 @@ const workbenchVariants = {
   closed: {
     width: 0,
     transition: {
-      duration: 0.2,
+      duration: 0.3,
       ease: cubicEasingFn,
     },
   },
   open: {
     width: 'var(--workbench-width)',
     transition: {
-      duration: 0.2,
+      duration: 0.3,
       ease: cubicEasingFn,
     },
   },
@@ -109,7 +109,7 @@ export const Workbench = memo(({ chatStarted, isStreaming }: WorkspaceProps) => 
       >
         <div
           className={classNames(
-            'fixed top-[calc(var(--header-height)+1.5rem)] bottom-6 w-[var(--workbench-inner-width)] mr-4 z-0 transition-[left,width] duration-200 bolt-ease-cubic-bezier',
+            'fixed top-[calc(var(--header-height)+1.5rem)] bottom-6 w-[var(--workbench-inner-width)] mr-4 z-0 transition-[left,width] duration-300 devloop-ease-cubic-bezier',
             {
               'left-[var(--workbench-left)]': showWorkbench,
               'left-[100%]': !showWorkbench,
@@ -117,24 +117,31 @@ export const Workbench = memo(({ chatStarted, isStreaming }: WorkspaceProps) => 
           )}
         >
           <div className="absolute inset-0 px-6">
-            <div className="h-full flex flex-col bg-bolt-elements-background-depth-2 border border-bolt-elements-borderColor shadow-sm rounded-lg overflow-hidden">
-              <div className="flex items-center px-3 py-2 border-b border-bolt-elements-borderColor">
+            <div className="h-full flex flex-col devloop-card border-devloop-elements-borderColor shadow-2xl overflow-hidden">
+              <div className="flex items-center px-6 py-4 border-b border-devloop-elements-borderColor bg-devloop-elements-background-depth-2/50 backdrop-blur-xl">
+                <div className="flex items-center gap-3">
+                  <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center">
+                    <div className="i-ph:code-bold text-white text-sm" />
+                  </div>
+                  <span className="font-semibold text-devloop-elements-textPrimary">DevLoop Workbench</span>
+                </div>
+                <div className="ml-6" />
                 <Slider selected={selectedView} options={sliderOptions} setSelected={setSelectedView} />
-                <div className="ml-auto" />
+                <div className="ml-auto flex items-center gap-2" />
                 {selectedView === 'code' && (
                   <PanelHeaderButton
-                    className="mr-1 text-sm"
+                    className="mr-2 text-sm devloop-button-secondary"
                     onClick={() => {
                       workbenchStore.toggleTerminal(!workbenchStore.showTerminal.get());
                     }}
                   >
-                    <div className="i-ph:terminal" />
-                    Toggle Terminal
+                    <div className="i-ph:terminal-window-duotone" />
+                    Terminal
                   </PanelHeaderButton>
                 )}
                 <IconButton
-                  icon="i-ph:x-circle"
-                  className="-mr-1"
+                  icon="i-ph:x-circle-duotone"
+                  className="-mr-1 hover:bg-error-500/20 hover:text-error-400"
                   size="xl"
                   onClick={() => {
                     workbenchStore.showWorkbench.set(false);

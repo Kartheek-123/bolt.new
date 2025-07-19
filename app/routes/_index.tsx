@@ -5,14 +5,17 @@ import { Chat } from '~/components/chat/Chat.client';
 import { Header } from '~/components/header/Header';
 
 export const meta: MetaFunction = () => {
-  return [{ title: 'Bolt' }, { name: 'description', content: 'Talk with Bolt, an AI assistant from StackBlitz' }];
+  return [
+    { title: 'DevLoop - AI-Powered Development Environment' }, 
+    { name: 'description', content: 'DevLoop - Where code comes to life. AI-powered development environment for modern developers.' }
+  ];
 };
 
 export const loader = () => json({});
 
 export default function Index() {
   return (
-    <div className="flex flex-col h-full w-full">
+    <div className="flex flex-col h-full w-full bg-gradient-to-br from-devloop-bg-primary via-devloop-bg-secondary to-devloop-bg-tertiary">
       <Header />
       <ClientOnly fallback={<BaseChat />}>{() => <Chat />}</ClientOnly>
     </div>

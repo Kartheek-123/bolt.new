@@ -10,7 +10,7 @@ import { cubicEasingFn } from '~/utils/easings';
 
 const highlighterOptions = {
   langs: ['shell'],
-  themes: ['light-plus', 'dark-plus'],
+  themes: ['github-light', 'github-dark'],
 };
 
 const shellHighlighter: HighlighterGeneric<BundledLanguage, BundledTheme> =
@@ -49,21 +49,29 @@ export const Artifact = memo(({ messageId }: ArtifactProps) => {
   }, [actions]);
 
   return (
-    <div className="artifact border border-bolt-elements-borderColor flex flex-col overflow-hidden rounded-lg w-full transition-border duration-150">
+    <div className="artifact devloop-card border-devloop-elements-artifacts-borderColor flex flex-col overflow-hidden rounded-xl w-full transition-all duration-200 hover:shadow-xl">
       <div className="flex">
         <button
-          className="flex items-stretch bg-bolt-elements-artifacts-background hover:bg-bolt-elements-artifacts-backgroundHover w-full overflow-hidden"
+          className="flex items-stretch bg-devloop-elements-artifacts-background hover:bg-devloop-elements-artifacts-backgroundHover w-full overflow-hidden transition-all duration-200 hover:scale-[1.02]"
           onClick={() => {
             const showWorkbench = workbenchStore.showWorkbench.get();
             workbenchStore.showWorkbench.set(!showWorkbench);
           }}
         >
-          <div className="px-5 p-3.5 w-full text-left">
-            <div className="w-full text-bolt-elements-textPrimary font-medium leading-5 text-sm">{artifact?.title}</div>
-            <div className="w-full w-full text-bolt-elements-textSecondary text-xs mt-0.5">Click to open Workbench</div>
+          <div className="px-6 py-4 w-full text-left">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center">
+                <div className="i-ph:code-bold text-white text-sm" />
+              </div>
+              <div className="w-full text-devloop-elements-textPrimary font-semibold leading-5 text-lg">{artifact?.title}</div>
+            </div>
+            <div className="w-full text-devloop-elements-textSecondary text-sm flex items-center gap-2">
+              <div className="i-ph:cursor-click-duotone" />
+              Click to open in DevLoop Workbench
+            </div>
           </div>
         </button>
-        <div className="bg-bolt-elements-artifacts-borderColor w-[1px]" />
+        <div className="bg-devloop-elements-artifacts-borderColor w-[1px]" />
         <AnimatePresence>
           {actions.length && (
             <motion.button
@@ -71,11 +79,12 @@ export const Artifact = memo(({ messageId }: ArtifactProps) => {
               animate={{ width: 'auto' }}
               exit={{ width: 0 }}
               transition={{ duration: 0.15, ease: cubicEasingFn }}
-              className="bg-bolt-elements-artifacts-background hover:bg-bolt-elements-artifacts-backgroundHover"
+              className="bg-devloop-elements-artifacts-background hover:bg-devloop-elements-artifacts-backgroundHover transition-all duration-200"
               onClick={toggleActions}
             >
-              <div className="p-4">
-                <div className={showActions ? 'i-ph:caret-up-bold' : 'i-ph:caret-down-bold'}></div>
+              <div className="p-4 flex items-center gap-2">
+                <div className={classNames('transition-transform duration-200', showActions ? 'i-ph:caret-up-bold' : 'i-ph:caret-down-bold')}></div>
+                <span className="text-sm font-medium text-devloop-elements-textSecondary">Actions</span>
               </div>
             </motion.button>
           )}
@@ -90,8 +99,8 @@ export const Artifact = memo(({ messageId }: ArtifactProps) => {
             exit={{ height: '0px' }}
             transition={{ duration: 0.15 }}
           >
-            <div className="bg-bolt-elements-artifacts-borderColor h-[1px]" />
-            <div className="p-5 text-left bg-bolt-elements-actions-background">
+            <div className="bg-devloop-elements-artifacts-borderColor h-[1px]" />
+            <div className="p-6 text-left bg-devloop-elements-actions-background">
               <ActionList actions={actions} />
             </div>
           </motion.div>
@@ -109,11 +118,11 @@ interface ShellCodeBlockProps {
 function ShellCodeBlock({ classsName, code }: ShellCodeBlockProps) {
   return (
     <div
-      className={classNames('text-xs', classsName)}
+      className={classNames('text-xs font-mono', classsName)}
       dangerouslySetInnerHTML={{
         __html: shellHighlighter.codeToHtml(code, {
           lang: 'shell',
-          theme: 'dark-plus',
+          theme: 'github-dark',
         }),
       }}
     ></div>
@@ -132,7 +141,7 @@ const actionVariants = {
 const ActionList = memo(({ actions }: ActionListProps) => {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.15 }}>
-      <ul className="list-none space-y-2.5">
+      <ul className="list-none space-y-3">
         {actions.map((action, index) => {
           const { status, type, content } = action;
           const isLast = index === actions.length - 1;
@@ -148,38 +157,40 @@ const ActionList = memo(({ actions }: ActionListProps) => {
                 ease: cubicEasingFn,
               }}
             >
-              <div className="flex items-center gap-1.5 text-sm">
-                <div className={classNames('text-lg', getIconColor(action.status))}>
+              <div className="flex items-center gap-3 text-sm">
+                <div className={classNames('text-lg flex-shrink-0', getIconColor(action.status))}>
                   {status === 'running' ? (
                     <div className="i-svg-spinners:90-ring-with-bg"></div>
                   ) : status === 'pending' ? (
                     <div className="i-ph:circle-duotone"></div>
                   ) : status === 'complete' ? (
-                    <div className="i-ph:check"></div>
+                    <div className="i-ph:check-circle-duotone"></div>
                   ) : status === 'failed' || status === 'aborted' ? (
-                    <div className="i-ph:x"></div>
+                    <div className="i-ph:x-circle-duotone"></div>
                   ) : null}
                 </div>
                 {type === 'file' ? (
-                  <div>
-                    Create{' '}
-                    <code className="bg-bolt-elements-artifacts-inlineCode-background text-bolt-elements-artifacts-inlineCode-text px-1.5 py-1 rounded-md">
+                  <div className="flex items-center gap-2">
+                    <span className="text-devloop-elements-textSecondary">Create</span>
+                    <code className="bg-devloop-elements-artifacts-inlineCode-background text-devloop-elements-artifacts-inlineCode-text px-2 py-1 rounded-lg font-mono text-xs">
                       {action.filePath}
                     </code>
                   </div>
                 ) : type === 'shell' ? (
-                  <div className="flex items-center w-full min-h-[28px]">
-                    <span className="flex-1">Run command</span>
+                  <div className="flex items-center w-full min-h-[32px]">
+                    <span className="flex-1 font-medium text-devloop-elements-textPrimary">Execute command</span>
                   </div>
                 ) : null}
               </div>
               {type === 'shell' && (
-                <ShellCodeBlock
-                  classsName={classNames('mt-1', {
-                    'mb-3.5': !isLast,
-                  })}
-                  code={content}
-                />
+                <div className="ml-6">
+                  <ShellCodeBlock
+                    classsName={classNames('mt-2 rounded-lg overflow-hidden', {
+                      'mb-4': !isLast,
+                    })}
+                    code={content}
+                  />
+                </div>
               )}
             </motion.li>
           );
@@ -192,19 +203,19 @@ const ActionList = memo(({ actions }: ActionListProps) => {
 function getIconColor(status: ActionState['status']) {
   switch (status) {
     case 'pending': {
-      return 'text-bolt-elements-textTertiary';
+      return 'text-devloop-elements-textTertiary';
     }
     case 'running': {
-      return 'text-bolt-elements-loader-progress';
+      return 'text-devloop-elements-loader-progress';
     }
     case 'complete': {
-      return 'text-bolt-elements-icon-success';
+      return 'text-devloop-elements-icon-success';
     }
     case 'aborted': {
-      return 'text-bolt-elements-textSecondary';
+      return 'text-devloop-elements-textSecondary';
     }
     case 'failed': {
-      return 'text-bolt-elements-icon-error';
+      return 'text-devloop-elements-icon-error';
     }
     default: {
       return undefined;
