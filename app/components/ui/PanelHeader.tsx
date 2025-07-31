@@ -10,7 +10,7 @@ export const PanelHeader = memo(({ className, children }: PanelHeaderProps) => {
   return (
     <div
       className={classNames(
-        'flex items-center gap-3 bg-devloop-elements-background-depth-2/50 backdrop-blur-xl text-devloop-elements-textSecondary border-b border-devloop-elements-borderColor px-6 py-3 min-h-[44px] text-sm font-medium',
+        'flex items-center gap-3 bg-dragondev-elements-background-depth-2/50 backdrop-blur-xl text-dragondev-elements-textSecondary border-b border-dragondev-elements-borderColor px-6 py-3 min-h-[44px] text-sm font-medium',
         className,
       )}
     >

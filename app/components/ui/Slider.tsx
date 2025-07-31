@@ -24,7 +24,7 @@ export const Slider = genericMemo(<T,>({ selected, options, setSelected }: Slide
   const isLeftSelected = selected === options.left.value;
 
   return (
-    <div className="flex items-center flex-wrap shrink-0 gap-1 bg-devloop-elements-background-depth-1/50 backdrop-blur-xl overflow-hidden rounded-xl p-1 border border-devloop-elements-borderColor">
+    <div className="flex items-center flex-wrap shrink-0 gap-1 bg-dragondev-elements-background-depth-1/50 backdrop-blur-xl overflow-hidden rounded-xl p-1 border border-dragondev-elements-borderColor">
       <SliderButton selected={isLeftSelected} setSelected={() => setSelected?.(options.left.value)}>
         {options.left.text}
       </SliderButton>
@@ -49,7 +49,7 @@ const SliderButton = memo(({ selected, children, setSelected }: SliderButtonProp
         'bg-transparent text-sm px-4 py-2 rounded-lg relative font-medium transition-all duration-200',
         selected
           ? 'text-white'
-          : 'text-devloop-elements-item-contentDefault hover:text-devloop-elements-item-contentActive',
+          : 'text-dragondev-elements-item-contentDefault hover:text-dragondev-elements-item-contentActive',
       )}
     >
       <span className="relative z-10">{children}</span>
@@ -57,7 +57,7 @@ const SliderButton = memo(({ selected, children, setSelected }: SliderButtonProp
         <motion.span
           layoutId="pill-tab"
           transition={{ duration: 0.2, ease: cubicEasingFn }}
-          className="absolute inset-0 z-0 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-lg shadow-lg"
+          className="absolute inset-0 z-0 bg-gradient-to-r from-dragon-500 to-fire-500 rounded-lg shadow-lg"
         ></motion.span>
       )}
     </button>

@@ -2,7 +2,7 @@ import { atom } from 'nanostores';
 
 export type Theme = 'dark' | 'light';
 
-export const kTheme = 'devloop_theme';
+export const kTheme = 'dragondev_theme';
 
 export function themeIsDark() {
   return themeStore.get() === 'dark';

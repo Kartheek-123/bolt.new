@@ -105,41 +105,41 @@ export function Menu() {
       initial="closed"
       animate={open ? 'open' : 'closed'}
       variants={menuVariants}
-      className="flex flex-col side-menu fixed top-0 w-[400px] h-full devloop-card border-devloop-elements-borderColor border-r rounded-r-3xl z-sidebar shadow-2xl text-sm backdrop-blur-xl"
+      className="flex flex-col side-menu fixed top-0 w-[400px] h-full dragondev-card border-dragondev-elements-borderColor border-r rounded-r-3xl z-sidebar shadow-2xl text-sm backdrop-blur-xl"
     >
-      <div className="flex items-center h-[var(--header-height)] px-6 border-b border-devloop-elements-borderColor">
+      <div className="flex items-center h-[var(--header-height)] px-6 border-b border-dragondev-elements-borderColor">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center">
-            <div className="i-ph:code-bold text-white text-lg" />
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-dragon-500 to-fire-500 flex items-center justify-center">
+            <div className="i-ph:lightning-bold text-white text-lg" />
           </div>
-          <span className="text-xl font-bold devloop-gradient-text">DevLoop</span>
+          <span className="text-xl font-bold dragondev-gradient-text">DragonDev</span>
         </div>
       </div>
       <div className="flex-1 flex flex-col h-full w-full overflow-hidden">
         <div className="p-6">
           <a
             href="/"
-            className="flex gap-3 items-center devloop-button-primary rounded-xl p-4 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl"
+            className="flex gap-3 items-center dragondev-button-primary rounded-xl p-4 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl"
           >
             <span className="inline-block i-ph:plus-circle-bold text-xl" />
-            <span className="font-semibold">Start New Project</span>
+            <span className="font-semibold">Start New Quest</span>
           </a>
         </div>
-        <div className="text-devloop-elements-textPrimary font-semibold pl-6 pr-5 mb-4 flex items-center gap-2">
+        <div className="text-dragondev-elements-textPrimary font-semibold pl-6 pr-5 mb-4 flex items-center gap-2">
           <div className="i-ph:clock-duotone text-lg" />
-          Recent Projects
+          Recent Quests
         </div>
         <div className="flex-1 overflow-scroll pl-6 pr-5 pb-5">
           {list.length === 0 && (
-            <div className="pl-2 text-devloop-elements-textTertiary text-center py-8">
+            <div className="pl-2 text-dragondev-elements-textTertiary text-center py-8">
               <div className="i-ph:folder-open-duotone text-4xl mb-3 opacity-50" />
-              <p>No previous projects</p>
+              <p>No previous quests</p>
             </div>
           )}
           <DialogRoot open={dialogContent !== null}>
             {binDates(list).map(({ category, items }) => (
               <div key={category} className="mb-6 first:mt-0 space-y-2">
-                <div className="text-devloop-elements-textTertiary sticky top-0 z-1 bg-devloop-elements-background-depth-2/80 backdrop-blur-xl pl-2 pt-2 pb-2 rounded-lg font-medium">
+                <div className="text-dragondev-elements-textTertiary sticky top-0 z-1 bg-dragondev-elements-background-depth-2/80 backdrop-blur-xl pl-2 pt-2 pb-2 rounded-lg font-medium">
                   {category}
                 </div>
                 {items.map((item) => (
@@ -150,16 +150,16 @@ export function Menu() {
             <Dialog onBackdrop={closeDialog} onClose={closeDialog}>
               {dialogContent?.type === 'delete' && (
                 <>
-                  <DialogTitle>Delete Project?</DialogTitle>
+                  <DialogTitle>Delete Quest?</DialogTitle>
                   <DialogDescription asChild>
                     <div>
                       <p>
                         You are about to delete <strong>{dialogContent.item.description}</strong>.
                       </p>
-                      <p className="mt-1">Are you sure you want to delete this project?</p>
+                      <p className="mt-1">Are you sure you want to delete this quest?</p>
                     </div>
                   </DialogDescription>
-                  <div className="px-5 pb-4 bg-devloop-elements-background-depth-2 flex gap-2 justify-end">
+                  <div className="px-5 pb-4 bg-dragondev-elements-background-depth-2 flex gap-2 justify-end">
                     <DialogButton type="secondary" onClick={closeDialog}>
                       Cancel
                     </DialogButton>
@@ -178,10 +178,10 @@ export function Menu() {
             </Dialog>
           </DialogRoot>
         </div>
-        <div className="flex items-center border-t border-devloop-elements-borderColor p-6 bg-devloop-elements-background-depth-2/50 backdrop-blur-xl">
+        <div className="flex items-center border-t border-dragondev-elements-borderColor p-6 bg-dragondev-elements-background-depth-2/50 backdrop-blur-xl">
           <div className="flex items-center gap-3 flex-1">
-            <div className="i-ph:gear-duotone text-lg text-devloop-elements-textSecondary" />
-            <span className="text-devloop-elements-textSecondary font-medium">Settings</span>
+            <div className="i-ph:gear-duotone text-lg text-dragondev-elements-textSecondary" />
+            <span className="text-dragondev-elements-textSecondary font-medium">Settings</span>
           </div>
           <ThemeSwitch className="ml-auto" />
         </div>

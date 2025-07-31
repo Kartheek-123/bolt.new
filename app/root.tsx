@@ -39,10 +39,10 @@ export const links: LinksFunction = () => [
 ];
 
 const inlineThemeCode = stripIndents`
-  setDevLoopTheme();
+  setDragonDevTheme();
 
-  function setDevLoopTheme() {
-    let theme = localStorage.getItem('devloop_theme');
+  function setDragonDevTheme() {
+    let theme = localStorage.getItem('dragondev_theme');
 
     if (!theme) {
       theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';

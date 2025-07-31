@@ -1,216 +1,216 @@
-/* DevLoop Color Tokens Light Theme */
+/* DragonDev Color Tokens Light Theme */
 :root,
 :root[data-theme='light'] {
-  --devloop-elements-borderColor: rgba(148, 163, 184, 0.2);
-  --devloop-elements-borderColorActive: theme('colors.primary.500');
+  --dragondev-elements-borderColor: rgba(148, 163, 184, 0.2);
+  --dragondev-elements-borderColorActive: theme('colors.dragon.500');
 
-  --devloop-elements-bg-depth-1: rgba(255, 255, 255, 0.95);
-  --devloop-elements-bg-depth-2: rgba(248, 250, 252, 0.9);
-  --devloop-elements-bg-depth-3: rgba(241, 245, 249, 0.8);
-  --devloop-elements-bg-depth-4: rgba(226, 232, 240, 0.6);
+  --dragondev-elements-bg-depth-1: rgba(255, 255, 255, 0.95);
+  --dragondev-elements-bg-depth-2: rgba(248, 250, 252, 0.9);
+  --dragondev-elements-bg-depth-3: rgba(241, 245, 249, 0.8);
+  --dragondev-elements-bg-depth-4: rgba(226, 232, 240, 0.6);
 
-  --devloop-elements-textPrimary: theme('colors.gray.900');
-  --devloop-elements-textSecondary: theme('colors.gray.600');
-  --devloop-elements-textTertiary: theme('colors.gray.500');
+  --dragondev-elements-textPrimary: theme('colors.gray.900');
+  --dragondev-elements-textSecondary: theme('colors.gray.600');
+  --dragondev-elements-textTertiary: theme('colors.gray.500');
 
-  --devloop-elements-code-background: rgba(15, 23, 42, 0.05);
-  --devloop-elements-code-text: theme('colors.gray.800');
+  --dragondev-elements-code-background: rgba(15, 23, 42, 0.05);
+  --dragondev-elements-code-text: theme('colors.gray.800');
 
-  --devloop-elements-button-primary-background: linear-gradient(135deg, theme('colors.primary.500'), theme('colors.secondary.500'));
-  --devloop-elements-button-primary-backgroundHover: linear-gradient(135deg, theme('colors.primary.600'), theme('colors.secondary.600'));
-  --devloop-elements-button-primary-text: theme('colors.white');
+  --dragondev-elements-button-primary-background: linear-gradient(135deg, theme('colors.dragon.500'), theme('colors.fire.500'));
+  --dragondev-elements-button-primary-backgroundHover: linear-gradient(135deg, theme('colors.dragon.600'), theme('colors.fire.600'));
+  --dragondev-elements-button-primary-text: theme('colors.white');
 
-  --devloop-elements-button-secondary-background: rgba(255, 255, 255, 0.1);
-  --devloop-elements-button-secondary-backgroundHover: rgba(255, 255, 255, 0.2);
-  --devloop-elements-button-secondary-text: theme('colors.gray.700');
+  --dragondev-elements-button-secondary-background: rgba(255, 255, 255, 0.1);
+  --dragondev-elements-button-secondary-backgroundHover: rgba(255, 255, 255, 0.2);
+  --dragondev-elements-button-secondary-text: theme('colors.gray.700');
 
-  --devloop-elements-button-danger-background: rgba(239, 68, 68, 0.1);
-  --devloop-elements-button-danger-backgroundHover: rgba(239, 68, 68, 0.2);
-  --devloop-elements-button-danger-text: theme('colors.error.600');
+  --dragondev-elements-button-danger-background: rgba(239, 68, 68, 0.1);
+  --dragondev-elements-button-danger-backgroundHover: rgba(239, 68, 68, 0.2);
+  --dragondev-elements-button-danger-text: theme('colors.error.600');
 
-  --devloop-elements-item-contentDefault: theme('colors.gray.600');
-  --devloop-elements-item-contentActive: theme('colors.gray.900');
-  --devloop-elements-item-contentAccent: theme('colors.primary.600');
-  --devloop-elements-item-contentDanger: theme('colors.error.600');
-  --devloop-elements-item-backgroundDefault: transparent;
-  --devloop-elements-item-backgroundActive: rgba(59, 130, 246, 0.1);
-  --devloop-elements-item-backgroundAccent: rgba(59, 130, 246, 0.15);
-  --devloop-elements-item-backgroundDanger: rgba(239, 68, 68, 0.1);
+  --dragondev-elements-item-contentDefault: theme('colors.gray.600');
+  --dragondev-elements-item-contentActive: theme('colors.gray.900');
+  --dragondev-elements-item-contentAccent: theme('colors.dragon.600');
+  --dragondev-elements-item-contentDanger: theme('colors.error.600');
+  --dragondev-elements-item-backgroundDefault: transparent;
+  --dragondev-elements-item-backgroundActive: rgba(99, 102, 241, 0.1);
+  --dragondev-elements-item-backgroundAccent: rgba(99, 102, 241, 0.15);
+  --dragondev-elements-item-backgroundDanger: rgba(239, 68, 68, 0.1);
 
-  --devloop-elements-loader-background: rgba(148, 163, 184, 0.2);
-  --devloop-elements-loader-progress: theme('colors.primary.500');
+  --dragondev-elements-loader-background: rgba(148, 163, 184, 0.2);
+  --dragondev-elements-loader-progress: theme('colors.dragon.500');
 
-  --devloop-elements-artifacts-background: rgba(255, 255, 255, 0.9);
-  --devloop-elements-artifacts-backgroundHover: rgba(255, 255, 255, 0.95);
-  --devloop-elements-artifacts-borderColor: var(--devloop-elements-borderColor);
-  --devloop-elements-artifacts-inlineCode-background: rgba(15, 23, 42, 0.08);
-  --devloop-elements-artifacts-inlineCode-text: var(--devloop-elements-textPrimary);
+  --dragondev-elements-artifacts-background: rgba(255, 255, 255, 0.9);
+  --dragondev-elements-artifacts-backgroundHover: rgba(255, 255, 255, 0.95);
+  --dragondev-elements-artifacts-borderColor: var(--dragondev-elements-borderColor);
+  --dragondev-elements-artifacts-inlineCode-background: rgba(15, 23, 42, 0.08);
+  --dragondev-elements-artifacts-inlineCode-text: var(--dragondev-elements-textPrimary);
 
-  --devloop-elements-actions-background: rgba(255, 255, 255, 0.9);
-  --devloop-elements-actions-code-background: theme('colors.gray.900');
+  --dragondev-elements-actions-background: rgba(255, 255, 255, 0.9);
+  --dragondev-elements-actions-code-background: theme('colors.gray.900');
 
-  --devloop-elements-messages-background: rgba(255, 255, 255, 0.6);
-  --devloop-elements-messages-linkColor: theme('colors.primary.600');
-  --devloop-elements-messages-code-background: theme('colors.gray.900');
-  --devloop-elements-messages-inlineCode-background: rgba(15, 23, 42, 0.1);
-  --devloop-elements-messages-inlineCode-text: theme('colors.gray.800');
+  --dragondev-elements-messages-background: rgba(255, 255, 255, 0.6);
+  --dragondev-elements-messages-linkColor: theme('colors.dragon.600');
+  --dragondev-elements-messages-code-background: theme('colors.gray.900');
+  --dragondev-elements-messages-inlineCode-background: rgba(15, 23, 42, 0.1);
+  --dragondev-elements-messages-inlineCode-text: theme('colors.gray.800');
 
-  --devloop-elements-icon-success: theme('colors.success.500');
-  --devloop-elements-icon-error: theme('colors.error.500');
-  --devloop-elements-icon-primary: theme('colors.gray.700');
-  --devloop-elements-icon-secondary: theme('colors.gray.500');
-  --devloop-elements-icon-tertiary: theme('colors.gray.400');
+  --dragondev-elements-icon-success: theme('colors.success.500');
+  --dragondev-elements-icon-error: theme('colors.error.500');
+  --dragondev-elements-icon-primary: theme('colors.gray.700');
+  --dragondev-elements-icon-secondary: theme('colors.gray.500');
+  --dragondev-elements-icon-tertiary: theme('colors.gray.400');
 
-  --devloop-elements-dividerColor: rgba(148, 163, 184, 0.2);
+  --dragondev-elements-dividerColor: rgba(148, 163, 184, 0.2);
 
-  --devloop-elements-prompt-background: rgba(255, 255, 255, 0.8);
+  --dragondev-elements-prompt-background: rgba(255, 255, 255, 0.8);
 
-  --devloop-elements-sidebar-dropdownShadow: rgba(15, 23, 42, 0.1);
-  --devloop-elements-sidebar-buttonBackgroundDefault: rgba(59, 130, 246, 0.1);
-  --devloop-elements-sidebar-buttonBackgroundHover: rgba(59, 130, 246, 0.2);
-  --devloop-elements-sidebar-buttonText: theme('colors.primary.700');
+  --dragondev-elements-sidebar-dropdownShadow: rgba(15, 23, 42, 0.1);
+  --dragondev-elements-sidebar-buttonBackgroundDefault: rgba(99, 102, 241, 0.1);
+  --dragondev-elements-sidebar-buttonBackgroundHover: rgba(99, 102, 241, 0.2);
+  --dragondev-elements-sidebar-buttonText: theme('colors.dragon.700');
 
-  --devloop-elements-preview-addressBar-background: rgba(241, 245, 249, 0.8);
-  --devloop-elements-preview-addressBar-backgroundHover: rgba(241, 245, 249, 0.9);
-  --devloop-elements-preview-addressBar-backgroundActive: rgba(255, 255, 255, 0.9);
-  --devloop-elements-preview-addressBar-text: var(--devloop-elements-textSecondary);
-  --devloop-elements-preview-addressBar-textActive: var(--devloop-elements-textPrimary);
+  --dragondev-elements-preview-addressBar-background: rgba(241, 245, 249, 0.8);
+  --dragondev-elements-preview-addressBar-backgroundHover: rgba(241, 245, 249, 0.9);
+  --dragondev-elements-preview-addressBar-backgroundActive: rgba(255, 255, 255, 0.9);
+  --dragondev-elements-preview-addressBar-text: var(--dragondev-elements-textSecondary);
+  --dragondev-elements-preview-addressBar-textActive: var(--dragondev-elements-textPrimary);
 
-  --devloop-elements-terminals-background: rgba(255, 255, 255, 0.9);
-  --devloop-elements-terminals-buttonBackground: var(--devloop-elements-bg-depth-4);
+  --dragondev-elements-terminals-background: rgba(255, 255, 255, 0.9);
+  --dragondev-elements-terminals-buttonBackground: var(--dragondev-elements-bg-depth-4);
 
-  --devloop-elements-cta-background: rgba(241, 245, 249, 0.8);
-  --devloop-elements-cta-text: theme('colors.gray.900');
+  --dragondev-elements-cta-background: rgba(241, 245, 249, 0.8);
+  --dragondev-elements-cta-text: theme('colors.gray.900');
 
   /* Terminal Colors */
-  --devloop-terminal-background: var(--devloop-elements-terminals-background);
-  --devloop-terminal-foreground: #1e293b;
-  --devloop-terminal-selection-background: rgba(59, 130, 246, 0.3);
-  --devloop-terminal-black: #000000;
-  --devloop-terminal-red: #dc2626;
-  --devloop-terminal-green: #16a34a;
-  --devloop-terminal-yellow: #d97706;
-  --devloop-terminal-blue: #2563eb;
-  --devloop-terminal-magenta: #9333ea;
-  --devloop-terminal-cyan: #0891b2;
-  --devloop-terminal-white: #64748b;
-  --devloop-terminal-brightBlack: #475569;
-  --devloop-terminal-brightRed: #dc2626;
-  --devloop-terminal-brightGreen: #16a34a;
-  --devloop-terminal-brightYellow: #d97706;
-  --devloop-terminal-brightBlue: #2563eb;
-  --devloop-terminal-brightMagenta: #9333ea;
-  --devloop-terminal-brightCyan: #0891b2;
-  --devloop-terminal-brightWhite: #334155;
+  --dragondev-terminal-background: var(--dragondev-elements-terminals-background);
+  --dragondev-terminal-foreground: #1e293b;
+  --dragondev-terminal-selection-background: rgba(99, 102, 241, 0.3);
+  --dragondev-terminal-black: #000000;
+  --dragondev-terminal-red: #dc2626;
+  --dragondev-terminal-green: #16a34a;
+  --dragondev-terminal-yellow: #d97706;
+  --dragondev-terminal-blue: #2563eb;
+  --dragondev-terminal-magenta: #9333ea;
+  --dragondev-terminal-cyan: #0891b2;
+  --dragondev-terminal-white: #64748b;
+  --dragondev-terminal-brightBlack: #475569;
+  --dragondev-terminal-brightRed: #dc2626;
+  --dragondev-terminal-brightGreen: #16a34a;
+  --dragondev-terminal-brightYellow: #d97706;
+  --dragondev-terminal-brightBlue: #2563eb;
+  --dragondev-terminal-brightMagenta: #9333ea;
+  --dragondev-terminal-brightCyan: #0891b2;
+  --dragondev-terminal-brightWhite: #334155;
 }
 
-/* DevLoop Color Tokens Dark Theme */
+/* DragonDev Color Tokens Dark Theme */
 :root[data-theme='dark'] {
-  --devloop-elements-borderColor: rgba(148, 163, 184, 0.15);
-  --devloop-elements-borderColorActive: theme('colors.primary.400');
+  --dragondev-elements-borderColor: rgba(148, 163, 184, 0.15);
+  --dragondev-elements-borderColorActive: theme('colors.dragon.400');
 
-  --devloop-elements-bg-depth-1: rgba(15, 23, 42, 0.95);
-  --devloop-elements-bg-depth-2: rgba(30, 41, 59, 0.9);
-  --devloop-elements-bg-depth-3: rgba(51, 65, 85, 0.8);
-  --devloop-elements-bg-depth-4: rgba(71, 85, 105, 0.6);
+  --dragondev-elements-bg-depth-1: rgba(15, 23, 42, 0.95);
+  --dragondev-elements-bg-depth-2: rgba(30, 41, 59, 0.9);
+  --dragondev-elements-bg-depth-3: rgba(51, 65, 85, 0.8);
+  --dragondev-elements-bg-depth-4: rgba(71, 85, 105, 0.6);
 
-  --devloop-elements-textPrimary: theme('colors.gray.100');
-  --devloop-elements-textSecondary: theme('colors.gray.400');
-  --devloop-elements-textTertiary: theme('colors.gray.500');
+  --dragondev-elements-textPrimary: theme('colors.gray.100');
+  --dragondev-elements-textSecondary: theme('colors.gray.400');
+  --dragondev-elements-textTertiary: theme('colors.gray.500');
 
-  --devloop-elements-code-background: rgba(30, 41, 59, 0.8);
-  --devloop-elements-code-text: theme('colors.gray.200');
+  --dragondev-elements-code-background: rgba(30, 41, 59, 0.8);
+  --dragondev-elements-code-text: theme('colors.gray.200');
 
-  --devloop-elements-button-primary-background: linear-gradient(135deg, theme('colors.primary.500'), theme('colors.secondary.500'));
-  --devloop-elements-button-primary-backgroundHover: linear-gradient(135deg, theme('colors.primary.400'), theme('colors.secondary.400'));
-  --devloop-elements-button-primary-text: theme('colors.white');
+  --dragondev-elements-button-primary-background: linear-gradient(135deg, theme('colors.dragon.500'), theme('colors.fire.500'));
+  --dragondev-elements-button-primary-backgroundHover: linear-gradient(135deg, theme('colors.dragon.400'), theme('colors.fire.400'));
+  --dragondev-elements-button-primary-text: theme('colors.white');
 
-  --devloop-elements-button-secondary-background: rgba(255, 255, 255, 0.05);
-  --devloop-elements-button-secondary-backgroundHover: rgba(255, 255, 255, 0.1);
-  --devloop-elements-button-secondary-text: theme('colors.gray.300');
+  --dragondev-elements-button-secondary-background: rgba(255, 255, 255, 0.05);
+  --dragondev-elements-button-secondary-backgroundHover: rgba(255, 255, 255, 0.1);
+  --dragondev-elements-button-secondary-text: theme('colors.gray.300');
 
-  --devloop-elements-button-danger-background: rgba(239, 68, 68, 0.15);
-  --devloop-elements-button-danger-backgroundHover: rgba(239, 68, 68, 0.25);
-  --devloop-elements-button-danger-text: theme('colors.error.400');
+  --dragondev-elements-button-danger-background: rgba(239, 68, 68, 0.15);
+  --dragondev-elements-button-danger-backgroundHover: rgba(239, 68, 68, 0.25);
+  --dragondev-elements-button-danger-text: theme('colors.error.400');
 
-  --devloop-elements-item-contentDefault: theme('colors.gray.400');
-  --devloop-elements-item-contentActive: theme('colors.gray.100');
-  --devloop-elements-item-contentAccent: theme('colors.primary.400');
-  --devloop-elements-item-contentDanger: theme('colors.error.400');
-  --devloop-elements-item-backgroundDefault: transparent;
-  --devloop-elements-item-backgroundActive: rgba(59, 130, 246, 0.15);
-  --devloop-elements-item-backgroundAccent: rgba(59, 130, 246, 0.2);
-  --devloop-elements-item-backgroundDanger: rgba(239, 68, 68, 0.15);
+  --dragondev-elements-item-contentDefault: theme('colors.gray.400');
+  --dragondev-elements-item-contentActive: theme('colors.gray.100');
+  --dragondev-elements-item-contentAccent: theme('colors.dragon.400');
+  --dragondev-elements-item-contentDanger: theme('colors.error.400');
+  --dragondev-elements-item-backgroundDefault: transparent;
+  --dragondev-elements-item-backgroundActive: rgba(99, 102, 241, 0.15);
+  --dragondev-elements-item-backgroundAccent: rgba(99, 102, 241, 0.2);
+  --dragondev-elements-item-backgroundDanger: rgba(239, 68, 68, 0.15);
 
-  --devloop-elements-loader-background: rgba(71, 85, 105, 0.3);
-  --devloop-elements-loader-progress: theme('colors.primary.400');
+  --dragondev-elements-loader-background: rgba(71, 85, 105, 0.3);
+  --dragondev-elements-loader-progress: theme('colors.dragon.400');
 
-  --devloop-elements-artifacts-background: rgba(30, 41, 59, 0.9);
-  --devloop-elements-artifacts-backgroundHover: rgba(30, 41, 59, 0.95);
-  --devloop-elements-artifacts-borderColor: var(--devloop-elements-borderColor);
-  --devloop-elements-artifacts-inlineCode-background: rgba(51, 65, 85, 0.8);
-  --devloop-elements-artifacts-inlineCode-text: theme('colors.gray.200');
+  --dragondev-elements-artifacts-background: rgba(30, 41, 59, 0.9);
+  --dragondev-elements-artifacts-backgroundHover: rgba(30, 41, 59, 0.95);
+  --dragondev-elements-artifacts-borderColor: var(--dragondev-elements-borderColor);
+  --dragondev-elements-artifacts-inlineCode-background: rgba(51, 65, 85, 0.8);
+  --dragondev-elements-artifacts-inlineCode-text: theme('colors.gray.200');
 
-  --devloop-elements-actions-background: rgba(30, 41, 59, 0.9);
-  --devloop-elements-actions-code-background: rgba(15, 23, 42, 0.9);
+  --dragondev-elements-actions-background: rgba(30, 41, 59, 0.9);
+  --dragondev-elements-actions-code-background: rgba(15, 23, 42, 0.9);
 
-  --devloop-elements-messages-background: rgba(30, 41, 59, 0.6);
-  --devloop-elements-messages-linkColor: theme('colors.primary.400');
-  --devloop-elements-messages-code-background: rgba(15, 23, 42, 0.9);
-  --devloop-elements-messages-inlineCode-background: rgba(51, 65, 85, 0.8);
-  --devloop-elements-messages-inlineCode-text: var(--devloop-elements-textPrimary);
+  --dragondev-elements-messages-background: rgba(30, 41, 59, 0.6);
+  --dragondev-elements-messages-linkColor: theme('colors.dragon.400');
+  --dragondev-elements-messages-code-background: rgba(15, 23, 42, 0.9);
+  --dragondev-elements-messages-inlineCode-background: rgba(51, 65, 85, 0.8);
+  --dragondev-elements-messages-inlineCode-text: var(--dragondev-elements-textPrimary);
 
-  --devloop-elements-icon-success: theme('colors.success.400');
-  --devloop-elements-icon-error: theme('colors.error.400');
-  --devloop-elements-icon-primary: theme('colors.gray.300');
-  --devloop-elements-icon-secondary: theme('colors.gray.500');
-  --devloop-elements-icon-tertiary: theme('colors.gray.600');
+  --dragondev-elements-icon-success: theme('colors.success.400');
+  --dragondev-elements-icon-error: theme('colors.error.400');
+  --dragondev-elements-icon-primary: theme('colors.gray.300');
+  --dragondev-elements-icon-secondary: theme('colors.gray.500');
+  --dragondev-elements-icon-tertiary: theme('colors.gray.600');
 
-  --devloop-elements-dividerColor: rgba(148, 163, 184, 0.15);
+  --dragondev-elements-dividerColor: rgba(148, 163, 184, 0.15);
 
-  --devloop-elements-prompt-background: rgba(15, 23, 42, 0.8);
+  --dragondev-elements-prompt-background: rgba(15, 23, 42, 0.8);
 
-  --devloop-elements-sidebar-dropdownShadow: rgba(0, 0, 0, 0.3);
-  --devloop-elements-sidebar-buttonBackgroundDefault: rgba(59, 130, 246, 0.15);
-  --devloop-elements-sidebar-buttonBackgroundHover: rgba(59, 130, 246, 0.25);
-  --devloop-elements-sidebar-buttonText: theme('colors.primary.400');
+  --dragondev-elements-sidebar-dropdownShadow: rgba(0, 0, 0, 0.3);
+  --dragondev-elements-sidebar-buttonBackgroundDefault: rgba(99, 102, 241, 0.15);
+  --dragondev-elements-sidebar-buttonBackgroundHover: rgba(99, 102, 241, 0.25);
+  --dragondev-elements-sidebar-buttonText: theme('colors.dragon.400');
 
-  --devloop-elements-preview-addressBar-background: var(--devloop-elements-bg-depth-1);
-  --devloop-elements-preview-addressBar-backgroundHover: rgba(51, 65, 85, 0.6);
-  --devloop-elements-preview-addressBar-backgroundActive: var(--devloop-elements-bg-depth-1);
-  --devloop-elements-preview-addressBar-text: var(--devloop-elements-textSecondary);
-  --devloop-elements-preview-addressBar-textActive: var(--devloop-elements-textPrimary);
+  --dragondev-elements-preview-addressBar-background: var(--dragondev-elements-bg-depth-1);
+  --dragondev-elements-preview-addressBar-backgroundHover: rgba(51, 65, 85, 0.6);
+  --dragondev-elements-preview-addressBar-backgroundActive: var(--dragondev-elements-bg-depth-1);
+  --dragondev-elements-preview-addressBar-text: var(--dragondev-elements-textSecondary);
+  --dragondev-elements-preview-addressBar-textActive: var(--dragondev-elements-textPrimary);
 
-  --devloop-elements-terminals-background: var(--devloop-elements-bg-depth-1);
-  --devloop-elements-terminals-buttonBackground: var(--devloop-elements-bg-depth-3);
+  --dragondev-elements-terminals-background: var(--dragondev-elements-bg-depth-1);
+  --dragondev-elements-terminals-buttonBackground: var(--dragondev-elements-bg-depth-3);
 
-  --devloop-elements-cta-background: rgba(255, 255, 255, 0.05);
-  --devloop-elements-cta-text: theme('colors.gray.100');
+  --dragondev-elements-cta-background: rgba(255, 255, 255, 0.05);
+  --dragondev-elements-cta-text: theme('colors.gray.100');
 
   /* Terminal Colors */
-  --devloop-terminal-background: var(--devloop-elements-terminals-background);
-  --devloop-terminal-foreground: #e2e8f0;
-  --devloop-terminal-selection-background: rgba(59, 130, 246, 0.3);
-  --devloop-terminal-black: #1e293b;
-  --devloop-terminal-red: #f87171;
-  --devloop-terminal-green: #4ade80;
-  --devloop-terminal-yellow: #fbbf24;
-  --devloop-terminal-blue: #60a5fa;
-  --devloop-terminal-magenta: #a78bfa;
-  --devloop-terminal-cyan: #22d3ee;
-  --devloop-terminal-white: #cbd5e1;
-  --devloop-terminal-brightBlack: #475569;
-  --devloop-terminal-brightRed: #f87171;
-  --devloop-terminal-brightGreen: #4ade80;
-  --devloop-terminal-brightYellow: #fbbf24;
-  --devloop-terminal-brightBlue: #60a5fa;
-  --devloop-terminal-brightMagenta: #a78bfa;
-  --devloop-terminal-brightCyan: #22d3ee;
-  --devloop-terminal-brightWhite: #f1f5f9;
+  --dragondev-terminal-background: var(--dragondev-elements-terminals-background);
+  --dragondev-terminal-foreground: #e2e8f0;
+  --dragondev-terminal-selection-background: rgba(99, 102, 241, 0.3);
+  --dragondev-terminal-black: #1e293b;
+  --dragondev-terminal-red: #f87171;
+  --dragondev-terminal-green: #4ade80;
+  --dragondev-terminal-yellow: #fbbf24;
+  --dragondev-terminal-blue: #60a5fa;
+  --dragondev-terminal-magenta: #a78bfa;
+  --dragondev-terminal-cyan: #22d3ee;
+  --dragondev-terminal-white: #cbd5e1;
+  --dragondev-terminal-brightBlack: #475569;
+  --dragondev-terminal-brightRed: #f87171;
+  --dragondev-terminal-brightGreen: #4ade80;
+  --dragondev-terminal-brightYellow: #fbbf24;
+  --dragondev-terminal-brightBlue: #60a5fa;
+  --dragondev-terminal-brightMagenta: #a78bfa;
+  --dragondev-terminal-brightCyan: #22d3ee;
+  --dragondev-terminal-brightWhite: #f1f5f9;
 }
 
 /*
- * DevLoop Element Tokens
+ * DragonDev Element Tokens
  */
 :root {
   --header-height: 64px;
@@ -221,28 +221,28 @@
   --workbench-left: calc(100% - var(--workbench-width));
 
   /* Toasts */
-  --toastify-color-progress-success: var(--devloop-elements-icon-success);
-  --toastify-color-progress-error: var(--devloop-elements-icon-error);
+  --toastify-color-progress-success: var(--dragondev-elements-icon-success);
+  --toastify-color-progress-error: var(--dragondev-elements-icon-error);
 
   /* Terminal */
-  --devloop-elements-terminal-backgroundColor: var(--devloop-terminal-background);
-  --devloop-elements-terminal-textColor: var(--devloop-terminal-foreground);
-  --devloop-elements-terminal-cursorColor: var(--devloop-terminal-foreground);
-  --devloop-elements-terminal-selection-backgroundColor: var(--devloop-terminal-selection-background);
-  --devloop-elements-terminal-color-black: var(--devloop-terminal-black);
-  --devloop-elements-terminal-color-red: var(--devloop-terminal-red);
-  --devloop-elements-terminal-color-green: var(--devloop-terminal-green);
-  --devloop-elements-terminal-color-yellow: var(--devloop-terminal-yellow);
-  --devloop-elements-terminal-color-blue: var(--devloop-terminal-blue);
-  --devloop-elements-terminal-color-magenta: var(--devloop-terminal-magenta);
-  --devloop-elements-terminal-color-cyan: var(--devloop-terminal-cyan);
-  --devloop-elements-terminal-color-white: var(--devloop-terminal-white);
-  --devloop-elements-terminal-color-brightBlack: var(--devloop-terminal-brightBlack);
-  --devloop-elements-terminal-color-brightRed: var(--devloop-terminal-brightRed);
-  --devloop-elements-terminal-color-brightGreen: var(--devloop-terminal-brightGreen);
-  --devloop-elements-terminal-color-brightYellow: var(--devloop-terminal-brightYellow);
-  --devloop-elements-terminal-color-brightBlue: var(--devloop-terminal-brightBlue);
-  --devloop-elements-terminal-color-brightMagenta: var(--devloop-terminal-brightMagenta);
-  --devloop-elements-terminal-color-brightCyan: var(--devloop-terminal-brightCyan);
-  --devloop-elements-terminal-color-brightWhite: var(--devloop-terminal-brightWhite);
+  --dragondev-elements-terminal-backgroundColor: var(--dragondev-terminal-background);
+  --dragondev-elements-terminal-textColor: var(--dragondev-terminal-foreground);
+  --dragondev-elements-terminal-cursorColor: var(--dragondev-terminal-foreground);
+  --dragondev-elements-terminal-selection-backgroundColor: var(--dragondev-terminal-selection-background);
+  --dragondev-elements-terminal-color-black: var(--dragondev-terminal-black);
+  --dragondev-elements-terminal-color-red: var(--dragondev-terminal-red);
+  --dragondev-elements-terminal-color-green: var(--dragondev-terminal-green);
+  --dragondev-elements-terminal-color-yellow: var(--dragondev-terminal-yellow);
+  --dragondev-elements-terminal-color-blue: var(--dragondev-terminal-blue);
+  --dragondev-elements-terminal-color-magenta: var(--dragondev-terminal-magenta);
+  --dragondev-elements-terminal-color-cyan: var(--dragondev-terminal-cyan);
+  --dragondev-elements-terminal-color-white: var(--dragondev-terminal-white);
+  --dragondev-elements-terminal-color-brightBlack: var(--dragondev-terminal-brightBlack);
+  --dragondev-elements-terminal-color-brightRed: var(--dragondev-terminal-brightRed);
+  --dragondev-elements-terminal-color-brightGreen: var(--dragondev-terminal-brightGreen);
+  --dragondev-elements-terminal-color-brightYellow: var(--dragondev-terminal-brightYellow);
+  --dragondev-elements-terminal-color-brightBlue: var(--dragondev-terminal-brightBlue);
+  --dragondev-elements-terminal-color-brightMagenta: var(--dragondev-terminal-brightMagenta);
+  --dragondev-elements-terminal-color-brightCyan: var(--dragondev-terminal-brightCyan);
+  --dragondev-elements-terminal-color-brightWhite: var(--dragondev-terminal-brightWhite);
 }

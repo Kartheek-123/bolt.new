@@ -109,7 +109,7 @@ export const Workbench = memo(({ chatStarted, isStreaming }: WorkspaceProps) => 
       >
         <div
           className={classNames(
-            'fixed top-[calc(var(--header-height)+1.5rem)] bottom-6 w-[var(--workbench-inner-width)] mr-4 z-0 transition-[left,width] duration-300 devloop-ease-cubic-bezier',
+            'fixed top-[calc(var(--header-height)+1.5rem)] bottom-6 w-[var(--workbench-inner-width)] mr-4 z-0 transition-[left,width] duration-300 dragondev-ease-cubic-bezier',
             {
               'left-[var(--workbench-left)]': showWorkbench,
               'left-[100%]': !showWorkbench,
@@ -117,20 +117,20 @@ export const Workbench = memo(({ chatStarted, isStreaming }: WorkspaceProps) => 
           )}
         >
           <div className="absolute inset-0 px-6">
-            <div className="h-full flex flex-col devloop-card border-devloop-elements-borderColor shadow-2xl overflow-hidden">
-              <div className="flex items-center px-6 py-4 border-b border-devloop-elements-borderColor bg-devloop-elements-background-depth-2/50 backdrop-blur-xl">
+            <div className="h-full flex flex-col dragondev-card border-dragondev-elements-borderColor shadow-2xl overflow-hidden">
+              <div className="flex items-center px-6 py-4 border-b border-dragondev-elements-borderColor bg-dragondev-elements-background-depth-2/50 backdrop-blur-xl">
                 <div className="flex items-center gap-3">
-                  <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center">
+                  <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-dragon-500 to-fire-500 flex items-center justify-center">
                     <div className="i-ph:code-bold text-white text-sm" />
                   </div>
-                  <span className="font-semibold text-devloop-elements-textPrimary">DevLoop Workbench</span>
+                  <span className="font-semibold text-dragondev-elements-textPrimary">Dragon Forge</span>
                 </div>
                 <div className="ml-6" />
                 <Slider selected={selectedView} options={sliderOptions} setSelected={setSelectedView} />
                 <div className="ml-auto flex items-center gap-2" />
                 {selectedView === 'code' && (
                   <PanelHeaderButton
-                    className="mr-2 text-sm devloop-button-secondary"
+                    className="mr-2 text-sm dragondev-button-secondary"
                     onClick={() => {
                       workbenchStore.toggleTerminal(!workbenchStore.showTerminal.get());
                     }}

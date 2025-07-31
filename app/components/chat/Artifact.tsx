@@ -49,10 +49,10 @@ export const Artifact = memo(({ messageId }: ArtifactProps) => {
   }, [actions]);
 
   return (
-    <div className="artifact devloop-card border-devloop-elements-artifacts-borderColor flex flex-col overflow-hidden rounded-xl w-full transition-all duration-200 hover:shadow-xl">
+    <div className="artifact dragondev-card border-dragondev-elements-artifacts-borderColor flex flex-col overflow-hidden rounded-xl w-full transition-all duration-200 hover:shadow-xl">
       <div className="flex">
         <button
-          className="flex items-stretch bg-devloop-elements-artifacts-background hover:bg-devloop-elements-artifacts-backgroundHover w-full overflow-hidden transition-all duration-200 hover:scale-[1.02]"
+          className="flex items-stretch bg-dragondev-elements-artifacts-background hover:bg-dragondev-elements-artifacts-backgroundHover w-full overflow-hidden transition-all duration-200 hover:scale-[1.02]"
           onClick={() => {
             const showWorkbench = workbenchStore.showWorkbench.get();
             workbenchStore.showWorkbench.set(!showWorkbench);
@@ -60,18 +60,18 @@ export const Artifact = memo(({ messageId }: ArtifactProps) => {
         >
           <div className="px-6 py-4 w-full text-left">
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-dragon-500 to-fire-500 flex items-center justify-center">
                 <div className="i-ph:code-bold text-white text-sm" />
               </div>
-              <div className="w-full text-devloop-elements-textPrimary font-semibold leading-5 text-lg">{artifact?.title}</div>
+              <div className="w-full text-dragondev-elements-textPrimary font-semibold leading-5 text-lg">{artifact?.title}</div>
             </div>
-            <div className="w-full text-devloop-elements-textSecondary text-sm flex items-center gap-2">
+            <div className="w-full text-dragondev-elements-textSecondary text-sm flex items-center gap-2">
               <div className="i-ph:cursor-click-duotone" />
-              Click to open in DevLoop Workbench
+              Click to open in Dragon Forge
             </div>
           </div>
         </button>
-        <div className="bg-devloop-elements-artifacts-borderColor w-[1px]" />
+        <div className="bg-dragondev-elements-artifacts-borderColor w-[1px]" />
         <AnimatePresence>
           {actions.length && (
             <motion.button
@@ -79,12 +79,12 @@ export const Artifact = memo(({ messageId }: ArtifactProps) => {
               animate={{ width: 'auto' }}
               exit={{ width: 0 }}
               transition={{ duration: 0.15, ease: cubicEasingFn }}
-              className="bg-devloop-elements-artifacts-background hover:bg-devloop-elements-artifacts-backgroundHover transition-all duration-200"
+              className="bg-dragondev-elements-artifacts-background hover:bg-dragondev-elements-artifacts-backgroundHover transition-all duration-200"
               onClick={toggleActions}
             >
               <div className="p-4 flex items-center gap-2">
                 <div className={classNames('transition-transform duration-200', showActions ? 'i-ph:caret-up-bold' : 'i-ph:caret-down-bold')}></div>
-                <span className="text-sm font-medium text-devloop-elements-textSecondary">Actions</span>
+                <span className="text-sm font-medium text-dragondev-elements-textSecondary">Actions</span>
               </div>
             </motion.button>
           )}
@@ -99,8 +99,8 @@ export const Artifact = memo(({ messageId }: ArtifactProps) => {
             exit={{ height: '0px' }}
             transition={{ duration: 0.15 }}
           >
-            <div className="bg-devloop-elements-artifacts-borderColor h-[1px]" />
-            <div className="p-6 text-left bg-devloop-elements-actions-background">
+            <div className="bg-dragondev-elements-artifacts-borderColor h-[1px]" />
+            <div className="p-6 text-left bg-dragondev-elements-actions-background">
               <ActionList actions={actions} />
             </div>
           </motion.div>
@@ -171,14 +171,14 @@ const ActionList = memo(({ actions }: ActionListProps) => {
                 </div>
                 {type === 'file' ? (
                   <div className="flex items-center gap-2">
-                    <span className="text-devloop-elements-textSecondary">Create</span>
-                    <code className="bg-devloop-elements-artifacts-inlineCode-background text-devloop-elements-artifacts-inlineCode-text px-2 py-1 rounded-lg font-mono text-xs">
+                    <span className="text-dragondev-elements-textSecondary">Create</span>
+                    <code className="bg-dragondev-elements-artifacts-inlineCode-background text-dragondev-elements-artifacts-inlineCode-text px-2 py-1 rounded-lg font-mono text-xs">
                       {action.filePath}
                     </code>
                   </div>
                 ) : type === 'shell' ? (
                   <div className="flex items-center w-full min-h-[32px]">
-                    <span className="flex-1 font-medium text-devloop-elements-textPrimary">Execute command</span>
+                    <span className="flex-1 font-medium text-dragondev-elements-textPrimary">Execute command</span>
                   </div>
                 ) : null}
               </div>
@@ -203,19 +203,19 @@ const ActionList = memo(({ actions }: ActionListProps) => {
 function getIconColor(status: ActionState['status']) {
   switch (status) {
     case 'pending': {
-      return 'text-devloop-elements-textTertiary';
+      return 'text-dragondev-elements-textTertiary';
     }
     case 'running': {
-      return 'text-devloop-elements-loader-progress';
+      return 'text-dragondev-elements-loader-progress';
     }
     case 'complete': {
-      return 'text-devloop-elements-icon-success';
+      return 'text-dragondev-elements-icon-success';
     }
     case 'aborted': {
-      return 'text-devloop-elements-textSecondary';
+      return 'text-dragondev-elements-textSecondary';
     }
     case 'failed': {
-      return 'text-devloop-elements-icon-error';
+      return 'text-dragondev-elements-icon-error';
     }
     default: {
       return undefined;

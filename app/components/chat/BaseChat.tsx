@@ -28,7 +28,7 @@ interface BaseChatProps {
 }
 
 const EXAMPLE_PROMPTS = [
-  { text: 'Build a modern React dashboard with charts', icon: 'i-ph:chart-bar-duotone' },
+  { text: 'Forge a modern React dashboard with charts', icon: 'i-ph:chart-bar-duotone' },
   { text: 'Create a Next.js blog with Tailwind CSS', icon: 'i-ph:article-duotone' },
   { text: 'Design a responsive landing page', icon: 'i-ph:layout-duotone' },
   { text: 'Build a real-time chat application', icon: 'i-ph:chat-circle-duotone' },
@@ -74,14 +74,14 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
             {!chatStarted && (
               <div id="intro" className="mt-[20vh] max-w-chat mx-auto px-6">
                 <div className="text-center mb-12">
-                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-primary-500 to-secondary-500 mb-6 shadow-2xl">
-                    <div className="i-ph:code-bold text-white text-3xl" />
+                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-dragon-500 to-fire-500 mb-6 shadow-2xl">
+                    <div className="i-ph:lightning-bold text-white text-3xl" />
                   </div>
-                  <h1 className="text-6xl font-bold devloop-gradient-text mb-4">
-                    Welcome to DevLoop
+                  <h1 className="text-6xl font-bold dragondev-gradient-text mb-4">
+                    Welcome to DragonDev
                   </h1>
-                  <p className="text-xl text-devloop-elements-textSecondary max-w-2xl mx-auto leading-relaxed">
-                    Where code comes to life. Build, iterate, and deploy with the power of AI.
+                  <p className="text-xl text-dragondev-elements-textSecondary max-w-2xl mx-auto leading-relaxed">
+                    Where code breathes fire. Forge legendary applications with the power of AI.
                   </p>
                 </div>
               </div>
@@ -110,12 +110,12 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
               >
                 <div
                   className={classNames(
-                    'devloop-card border-devloop-elements-borderColor bg-devloop-elements-prompt-background backdrop-blur-xl rounded-2xl overflow-hidden shadow-2xl',
+                    'dragondev-card border-dragondev-elements-borderColor bg-dragondev-elements-prompt-background backdrop-blur-xl rounded-2xl overflow-hidden shadow-2xl',
                   )}
                 >
                   <textarea
                     ref={textareaRef}
-                    className={`w-full pl-6 pt-6 pr-20 focus:outline-none resize-none text-lg text-devloop-elements-textPrimary placeholder-devloop-elements-textTertiary bg-transparent font-medium`}
+                    className={`w-full pl-6 pt-6 pr-20 focus:outline-none resize-none text-lg text-dragondev-elements-textPrimary placeholder-dragondev-elements-textTertiary bg-transparent font-medium`}
                     onKeyDown={(event) => {
                       if (event.key === 'Enter') {
                         if (event.shiftKey) {
@@ -135,7 +135,7 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                       minHeight: TEXTAREA_MIN_HEIGHT,
                       maxHeight: TEXTAREA_MAX_HEIGHT,
                     }}
-                    placeholder="Describe what you want to build..."
+                    placeholder="Describe what you want to forge..."
                     translate="no"
                   />
                   <ClientOnly>
@@ -159,15 +159,15 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                       <IconButton
                         title="Enhance prompt with AI"
                         disabled={input.length === 0 || enhancingPrompt}
-                        className={classNames('devloop-button-secondary text-sm px-3 py-2', {
+                        className={classNames('dragondev-button-secondary text-sm px-3 py-2', {
                           'opacity-100!': enhancingPrompt,
-                          'bg-gradient-to-r from-accent-500/20 to-primary-500/20 text-accent-400 border-accent-500/30': promptEnhanced,
+                          'bg-gradient-to-r from-ember-500/20 to-dragon-500/20 text-ember-400 border-ember-500/30': promptEnhanced,
                         })}
                         onClick={() => enhancePrompt?.()}
                       >
                         {enhancingPrompt ? (
                           <>
-                            <div className="i-svg-spinners:90-ring-with-bg text-devloop-elements-loader-progress text-lg"></div>
+                            <div className="i-svg-spinners:90-ring-with-bg text-dragondev-elements-loader-progress text-lg"></div>
                             <span className="ml-2 font-medium">Enhancing...</span>
                           </>
                         ) : (
@@ -179,10 +179,10 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                       </IconButton>
                     </div>
                     {input.length > 3 ? (
-                      <div className="text-xs text-devloop-elements-textTertiary flex items-center gap-2">
-                        <kbd className="px-2 py-1 bg-devloop-elements-code-background text-devloop-elements-code-text rounded font-mono text-xs">Shift</kbd>
+                      <div className="text-xs text-dragondev-elements-textTertiary flex items-center gap-2">
+                        <kbd className="px-2 py-1 bg-dragondev-elements-code-background text-dragondev-elements-code-text rounded font-mono text-xs">Shift</kbd>
                         <span>+</span>
-                        <kbd className="px-2 py-1 bg-devloop-elements-code-background text-devloop-elements-code-text rounded font-mono text-xs">Enter</kbd>
+                        <kbd className="px-2 py-1 bg-dragondev-elements-code-background text-dragondev-elements-code-text rounded font-mono text-xs">Enter</kbd>
                         <span>for new line</span>
                       </div>
                     ) : null}
@@ -201,18 +201,18 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                         onClick={(event) => {
                           sendMessage?.(event, examplePrompt.text);
                         }}
-                        className="group devloop-card p-6 text-left hover:scale-105 transition-all duration-300 hover:shadow-xl border-devloop-elements-borderColor hover:border-primary-500/30"
+                        className="group dragondev-card p-6 text-left hover:scale-105 transition-all duration-300 hover:shadow-xl border-dragondev-elements-borderColor hover:border-dragon-500/30"
                       >
                         <div className="flex items-start gap-4">
-                          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-500/20 to-secondary-500/20 flex items-center justify-center flex-shrink-0 group-hover:from-primary-500/30 group-hover:to-secondary-500/30 transition-all duration-300">
-                            <div className={classNames(examplePrompt.icon, 'text-primary-400 text-lg')} />
+                          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-dragon-500/20 to-fire-500/20 flex items-center justify-center flex-shrink-0 group-hover:from-dragon-500/30 group-hover:to-fire-500/30 transition-all duration-300">
+                            <div className={classNames(examplePrompt.icon, 'text-dragon-400 text-lg')} />
                           </div>
                           <div className="flex-1">
-                            <p className="text-devloop-elements-textPrimary font-medium group-hover:text-primary-400 transition-colors duration-300">
+                            <p className="text-dragondev-elements-textPrimary font-medium group-hover:text-dragon-400 transition-colors duration-300">
                               {examplePrompt.text}
                             </p>
                           </div>
-                          <div className="i-ph:arrow-right text-devloop-elements-textTertiary group-hover:text-primary-400 transition-colors duration-300 opacity-0 group-hover:opacity-100" />
+                          <div className="i-ph:arrow-right text-dragondev-elements-textTertiary group-hover:text-dragon-400 transition-colors duration-300 opacity-0 group-hover:opacity-100" />
                         </div>
                       </button>
                     );
